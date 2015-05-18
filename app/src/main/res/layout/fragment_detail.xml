@@ -5,13 +5,24 @@
     tools:context="edu.uw.aad.mzm.sample.provider.DetailFragment"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <TextView
+        android:id="@+id/textTaskID"
+        style="?android:attr/textAppearanceMedium"
+        android:text="Task:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@+id/textTaskID"
         android:id="@+id/textViewTaskID"
         style="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:textIsSelectable="true"/>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textViewTaskDescription"
