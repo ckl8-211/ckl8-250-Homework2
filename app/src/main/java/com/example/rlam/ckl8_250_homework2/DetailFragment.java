@@ -27,6 +27,7 @@ public class DetailFragment extends Fragment {
     private Uri mUri;
     private String version;
     private String taskID;
+    private String taskName;
     private String taskDescription;
 
 //    private OnFragmentInteractionListener mListener;
@@ -58,13 +59,14 @@ public class DetailFragment extends Fragment {
                 null);
         if(c.moveToFirst()) {
             taskID = c.getString(c.getColumnIndexOrThrow(TaskListContract.TaskList.ID));
+            taskName = c.getString(c.getColumnIndexOrThrow(TaskListContract.TaskList.TASK_NAME));
             taskDescription = c.getString(c.getColumnIndexOrThrow(TaskListContract.TaskList.TASK_DESCRIPTION));
         }
         //close the cursor
         c.close();
 
         if(taskID!=null && !TextUtils.isEmpty(taskID)) {
-            ((TextView)view.findViewById(R.id.textViewTaskID)).setText(taskID);
+            ((TextView)view.findViewById(R.id.textViewTaskName)).setText(taskName);
             ((TextView)view.findViewById(R.id.textViewTaskDescription)).setText(taskDescription);
         }
 

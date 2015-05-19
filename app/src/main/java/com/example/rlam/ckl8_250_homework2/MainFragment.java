@@ -44,7 +44,7 @@ public class MainFragment extends ListFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        String[] fromFields = new String[] {TaskListContract.TaskList.TASK_DESCRIPTION};
+        String[] fromFields = new String[] {TaskListContract.TaskList.TASK_NAME};
         int[] toFields = new int[] {android.R.id.text1};
 
         getLoaderManager().initLoader(0, null, this);
