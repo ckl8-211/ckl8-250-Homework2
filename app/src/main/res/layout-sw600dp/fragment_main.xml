@@ -1,3 +1,4 @@
+<!--On larger screens, the main screen has two panes -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,6 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/task_list"
         android:layout_gravity="center"
         android:layout_margin="16dp"
         android:padding="16dp"
@@ -24,4 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <FrameLayout
+        android:id="@+id/task_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
 </LinearLayout>
+

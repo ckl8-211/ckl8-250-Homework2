@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 /**interface to handle interaction events.*/
 
-public class DetailFragment extends Fragment {
+public class TaskDetailFragment extends Fragment {
 
     private Uri mUri;
     private String version;
@@ -32,7 +32,7 @@ public class DetailFragment extends Fragment {
 
 //    private OnFragmentInteractionListener mListener;
 
-    public DetailFragment() {
+    public TaskDetailFragment() {
         // Required empty public constructor
     }
 

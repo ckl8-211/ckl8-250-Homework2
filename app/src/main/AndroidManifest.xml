@@ -23,7 +23,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".DetailActivity"
+            android:name=".TaskDetailActivity"
             android:label="@string/title_activity_detail" >
         </activity>
 

@@ -16,7 +16,7 @@ public class TaskListDbHelper extends SQLiteOpenHelper {
     private final static String LOG_TAG = TaskListDbHelper.class.getSimpleName();
 
     // Database name
-    private final static String DB_NAME = "tasklist2.db";
+    private final static String DB_NAME = "tasklist3.db";
 
     // Database version
     private final static int DB_VERSION = 1;
@@ -48,8 +48,8 @@ public class TaskListDbHelper extends SQLiteOpenHelper {
 
         // Create initial data
         ContentValues contentValues = new ContentValues();
-        contentValues.put(TASK_LIST_ROW_TASK_NAME, "Default Taska Name");
-        contentValues.put(TASK_LIST_ROW_TASK_DESCRIPTION, "Default Task Description");
+        contentValues.put(TASK_LIST_ROW_TASK_NAME, "First Task Name");
+        contentValues.put(TASK_LIST_ROW_TASK_DESCRIPTION, "First Task Description");
 
         db.insert(TASK_LIST_TABLE_NAME, // table name
                 null,

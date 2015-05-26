@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class DetailActivity extends ActionBarActivity {
+public class TaskDetailActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,11 @@ public class DetailActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             FragmentManager fm = getSupportFragmentManager();
-            DetailFragment fragment = new DetailFragment();
+            TaskDetailFragment fragment = new TaskDetailFragment();
             FragmentTransaction ft = fm.beginTransaction();
             args.putParcelable("uri", uri);
             fragment.setArguments(args);
-            ft.add(R.id.detailContainer, fragment);
+            ft.add(R.id.task_detail_container, fragment);
             ft.commit();
         }
     }
