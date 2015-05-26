@@ -45,7 +45,7 @@ public class MainFragment extends ListFragment implements
     /**
      * The current activated item position. Only used on tablets.
      */
-    private int mActivatedPosition = ListView.INVALID_POSITION;
+//    private int mActivatedPosition = ListView.INVALID_POSITION;
 
     /**
      * A callback interface that all activities containing this fragment must
@@ -153,7 +153,9 @@ public class MainFragment extends ListFragment implements
         switch (item.getItemId()) {
             case R.id.action_add:
                 //TODO: add data
-                Toast.makeText(getActivity(), "To be implemented", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), AddTaskActivity.class);
+                startActivity(intent);
+//                Toast.makeText(getActivity(), "To be implemented", Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_delete:
                 //TODO: delete data
@@ -175,14 +177,14 @@ public class MainFragment extends ListFragment implements
         super.onListItemClick(l, v, position, id);
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        if (mActivatedPosition != ListView.INVALID_POSITION) {
-            // Serialize and persist the activated item position.
-            outState.putInt(STATE_ACTIVATED_POSITION, mActivatedPosition);
-        }
-    }
+//    @Override
+//    public void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//        if (mActivatedPosition != ListView.INVALID_POSITION) {
+//            // Serialize and persist the activated item position.
+//            outState.putInt(STATE_ACTIVATED_POSITION, mActivatedPosition);
+//        }
+//    }
 
 //    /**
 //     * Turns on activate-on-click mode. When this mode is on, list items will be
